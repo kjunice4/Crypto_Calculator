@@ -15,7 +15,7 @@ Builder.load_string("""
         cols: 1
         
         Button:
-            background_normal: "KSquared_Logo.png"
+            background_normal: "JuniceIndustries_Logo.png"
             on_release:
                 app.root.current = "Menu"
                 root.manager.transition.direction = "left" 
@@ -35,7 +35,7 @@ Builder.load_string("""
             background_color: 0, 0 , 0 , 1
             size_hint_y: None
             height: 100
-            text: "KSquared-Mathematics"
+            text: "Crypto Profit Calculator"
             on_release:
                 app.root.current = "Menu"
                 root.manager.transition.direction = "left" 
@@ -45,7 +45,7 @@ Builder.load_string("""
             background_color: 0, 0 , 0 , 1
             size_hint_y: None
             height: 100
-            text: "Crypto Profit Calculator"
+            text: "A Junice Industries© Product"
             on_release:
                 app.root.current = "Menu"
                 root.manager.transition.direction = "left" 
@@ -89,7 +89,7 @@ Builder.load_string("""
                 on_release:
                     app.root.current = "Crypto_Calculator"
                     root.manager.transition.direction = "left" 
-            
+                    
             Label:
                 font_size: '20sp'
                 size_hint_y: None
@@ -214,6 +214,7 @@ Builder.load_string("""
 
 """)
 
+
 class Crypto_Calculator(Screen):
     sm = ScreenManager()
 
@@ -278,7 +279,8 @@ class Crypto_Calculator(Screen):
         except Exception:
             self.ids.list_of_steps.add_widget(Label(text= "Invalid Input" ,font_size = '20sp', size_hint_y= None, height=100))
             self.layouts.append(layout)  
-                
+
+
 class Homepage(Screen):
     pass            
 
@@ -289,7 +291,7 @@ sm = ScreenManager()
 sm.add_widget(Homepage(name="Homepage"))
 sm.add_widget(Menu(name="Menu"))     
 sm.add_widget(Crypto_Calculator(name="Crypto_Calculator"))     
-sm.current = "Crypto_Calculator"   
+sm.current = "Homepage"   
 
 class Crypto_Calculator_App(App):
     def __init__(self, **kwargs):
@@ -301,7 +303,6 @@ class Crypto_Calculator_App(App):
         if key == 27:
             sm.current = sm.current
             return True
-    
     
     def build(app):
         return sm
