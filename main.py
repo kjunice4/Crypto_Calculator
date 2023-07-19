@@ -98,7 +98,7 @@ Builder.load_string("""
                 text: "Share Crypto Profit Calculator"
                     
             Image:
-                source: 'CryptoQRcode.png'
+                source: 'JuniceIndustriesQRcode.png'
                 size_hint_y: None
                 height: 800
                 width: 800
